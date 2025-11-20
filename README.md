@@ -1,12 +1,10 @@
 # Huffman-Shannon_fano
 # Aim:
 Consider a discrete memoryless source with symbols and statistics {0.125, 0.0625, 0.25, 0.0625, 0.125, 0.125, 0.25} for its output. 
-Apply the Huffman and Shannon-Fano to this source. 
-Show that by drawing the tree diagram, and 
-Calculate the average code word length, entropy, variance, redundancy, and efficiency.
+Apply the Huffman and Shannon-Fano to this source. Show that draw the tree diagram, the average code word length, Entropy, Variance, Redundancy, Efficiency.
 # Tools Required:
-- Python with NumPy and SciPy libraries.
-- Google Colab
+Python IDE with Numpy and Scipy.
+
 # Program:
 ```
 #Huffman and Shannon-Fano coding
@@ -47,19 +45,18 @@ print(f"Average Codeword Length is : {L}")
 print(f"Entropy is : {hs}")
 print(f"Efficiency is : {eff}")
 print(f"Redudancy is : {red}")
-print(f"Variance is : {var}") 
+print(f"Variance is : {var}")
 ```
 # Calculation:
+![WhatsApp Image 2025-09-01 at 12 33 13_a5dc81da](https://github.com/user-attachments/assets/17ddac48-1f60-4992-b789-681f5465a5a7)
+![WhatsApp Image 2025-09-01 at 12 33 11_1388be16](https://github.com/user-attachments/assets/8ee3cd3e-b2a3-4bc3-8cff-d302c090fd6b)
 
-![dc exp 2 (1)](https://github.com/user-attachments/assets/509e88e2-fbb8-4436-8303-9a1c6fb2dbc2)
-![DC EXP -2 (2)](https://github.com/user-attachments/assets/eac7faad-c256-4fa0-abd3-66d24fd10d77)
 
 
 
 # Output
-
-<img width="548" height="561" alt="image" src="https://github.com/user-attachments/assets/0bd90181-20d7-41e4-b345-70b67dabf2a3" />
+![image](https://github.com/user-attachments/assets/38be31cf-18e4-4dfe-86bf-9da261cb469d)
 
 # Results:
 
-The Huffman and Shannon-Fano coding techniques have been successfully applied to the given source. The average codeword length, entropy, variance, redundancy, and efficiency have been computed.
+The Huffman and Shannon-Fano of the given statistics {0.125, 0.0625, 0.25, 0.0625, 0.125, 0.125, 0.25} using python are verified.
