@@ -5,31 +5,61 @@ Apply the Huffman and Shannon-Fano to this source.
 Show that by drawing the tree diagram, and 
 Calculate the average code word length, entropy, variance, redundancy, and efficiency.
 # Tools Required:
+- Python with NumPy and SciPy libraries.
+- Google Colab
 # Program:
-import math
-p = [0.4, 0.2, 0.2, 0.1, 0.1]
-lk = [2, 2, 2, 3, 3]
-n = len(p)
-L = sum(p[k] * lk[k]
-for k in range(n))
-hs = sum(p[k] * math.log(1 / p[k], 2)
- for k in range(n))
-hs = round(hs, 3)
-eff = round(hs / L, 3)
-red = round(1 - eff, 3)
-var = sum(p[k] * (lk[k] - L) ** 2
-for k in range(n))
-var = round(var, 3)
+```
+#Huffman and Shannon-Fano coding
+import numpy as np
+import math 
+L  = 0
+hs = 0
+p = []
+lk = []
+n = int(input("Enter the number of Samples : "))
+for i in range (n): 
+    pr = float(input(f"Enter the probability of sample values {i + 1}: "))  
+    p.append(pr)
+for j in range (n): 
+    l = float(input(f"Enter the length of the sample values {j + 1}: "))  
+    lk.append(l)
+# Avg length of the code word
+for k in range (n):
+    Avg1 = p[k] * lk[k]
+    L = L + Avg1
+# Entropy
+for k in range (n):
+    e = p[k] * math.log(1 / p[k], 2)
+    hs = hs + e
+hs = round(hs,3)
+# Efficiency
+eff =  hs / L
+eff = round(eff,3)
+# Redundancy 
+red =  round(1 - eff,3) 
+# Variance
+var = 0
+for k in range(n):
+    var1 = p[k] * (lk[k]-L)**2
+    var = var + var1
+var = round(var,3)
 print(f"Average Codeword Length is : {L}")
 print(f"Entropy is : {hs}")
-print(f"Efficiency is : {eff * 100}%")
-print(f"Redundancy is : {red}")
-print(f"Variance is : {var}")
+print(f"Efficiency is : {eff}")
+print(f"Redudancy is : {red}")
+print(f"Variance is : {var}") 
+```
 # Calculation:
-![WhatsApp Image 2025-09-19 at 19 45 51_baa8724c](https://github.com/user-attachments/assets/d1024d84-eefc-4332-ba4d-be268593e8f3)
+
+![dc exp 2 (1)](https://github.com/user-attachments/assets/509e88e2-fbb8-4436-8303-9a1c6fb2dbc2)
+![DC EXP -2 (2)](https://github.com/user-attachments/assets/eac7faad-c256-4fa0-abd3-66d24fd10d77)
+
+
 
 # Output
-![WhatsApp Image 2025-09-18 at 20 30 10_9cc29a19](https://github.com/user-attachments/assets/8008105d-223f-41a3-87f6-1fa5a3cb3678)
+
+<img width="548" height="561" alt="image" src="https://github.com/user-attachments/assets/0bd90181-20d7-41e4-b345-70b67dabf2a3" />
 
 # Results:
-Thus the Huffman and Shannon-Fano to this source is verified.
+
+The Huffman and Shannon-Fano coding techniques have been successfully applied to the given source. The average codeword length, entropy, variance, redundancy, and efficiency have been computed.
